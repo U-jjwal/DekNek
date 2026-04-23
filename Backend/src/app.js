@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser"
 const app = express()
 
 app.use(cors({
-    origin: "*",
+    origin: ["https://post-5gqayqpft-laptopplapii-1553s-projects.vercel.app","http://localhost:5174"],
     credentials: true
 }))
 
