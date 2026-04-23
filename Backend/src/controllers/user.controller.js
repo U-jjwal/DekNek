@@ -35,9 +35,11 @@ export const registerUser = async (req, res) => {
 
         res.cookie("token", token)
 
+        const createdUser = await User.findById(user._id);
+
         res.status(201).json({
             message: "User registered successfully",
-            data: { user, token }
+            data: { user: createdUser, token }
         })
         
         
@@ -71,9 +73,11 @@ export const loginUser = async (req, res) => {
 
         res.cookie("token", token)
 
+        const loggedInUser = await User.findById(user._id);
+
         res.status(200).json({
             message: "User logged in successFully",
-            data: { user, token }
+            data: { user: loggedInUser, token }
         })
         
     } catch (err) {
