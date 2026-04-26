@@ -1,11 +1,17 @@
 import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
+import connectDB from "./db/index.js"
 
 const app = express()
 
+app.use(async (req, res, next) => {
+    await connectDB();
+    next();
+});
+
 app.use(cors({
-    origin: ["https://dek-nek-xnee.vercel.app","http://localhost:5174"],
+    origin: ["https://dek-nek-xnee.vercel.app","http://localhost:5173","https://dek-nek-xnee.vercel.app","https://dek-nek-theta.vercel.app"],
     credentials: true
 }))
 
