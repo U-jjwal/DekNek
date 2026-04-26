@@ -5,8 +5,8 @@ dotenv.config({
     path: './.env'
 })
 
-connectDB()
-.then(() => {
+try{
+
     app.on("error", (err) => {
         (console.log(Error), err);
         throw err;
@@ -15,10 +15,16 @@ connectDB()
         console.log(` Server is Running at ${process.env.PORT}`);
     })
     
-})
-.catch((err) => {
+} catch {
+
+    
  console.log("MONGODB connection failed !!!", err);
-})
+
+    
+}
+    
+    
+
 
 app.get('/', (req,res) => {
     res.send("working...")
