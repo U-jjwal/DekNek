@@ -11,7 +11,7 @@ app.use(async (req, res, next) => {
 });
 
 app.use(cors({
-    origin: ["https://dek-nek-xnee.vercel.app","http://localhost:5173","https://dek-nek-xnee.vercel.app","https://dek-nek-theta.vercel.app"],
+    origin: ["https://dek-nek-xnee.vercel.app","http://localhost:5173","https://dek-nek-xnee.vercel.app","https://dek-nek-ksa1.vercel.app"],
     credentials: true
 }))
 
