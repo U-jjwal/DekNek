@@ -15,7 +15,7 @@ try{
         console.log(` Server is Running at ${process.env.PORT}`);
     })
     
-} catch {
+} catch (err) {
 
     
  console.log("MONGODB connection failed !!!", err);
